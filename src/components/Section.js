@@ -17,6 +17,10 @@ const Section = ({ genre }) => {
 
   useEffect(() => {
     fetchData()
+    // To prevent the following error:
+    // React Hook useEffect has a missing dependency: 'fetchData'. 
+    // Either include it or remove the dependency array react-hooks/exhaustive-deps
+    // Add the following line:
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

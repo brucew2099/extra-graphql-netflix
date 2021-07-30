@@ -8,7 +8,7 @@ const HeroSection = () => {
   const fetchData = async () => {
     const response = await fetch("/.netlify/functions/getMovies", {
       method: "POST",
-      body: JSON.stringify({ genre: "Sci-Fi", pageState: pageState }),
+      body: JSON.stringify({ genre: "Comedies", pageState: pageState }),
     })
     const responseBody = await response.json()
     const movies = responseBody.data.movies_by_genre.values
